@@ -7,6 +7,9 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
+import { useEffect } from "react";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 type FormData = {
   name: string;
@@ -16,6 +19,9 @@ type FormData = {
 };
 
 export default function ContactSection() {
+  useEffect(() => {
+    aos.init({ duration: 1000 });
+  }, []);
   const {
     register,
     handleSubmit,
@@ -30,7 +36,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="container mx-auto px-6 py-20">
+    <section
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    id="contact" className="container mx-auto px-6 py-20 space-y-3">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 gradient-text text-center">
           Get In Touch
@@ -110,7 +120,7 @@ export default function ContactSection() {
                   <Input
                     type="text"
                     id="name"
-                    className="bg-slate-800 border-slate-700 focus:ring-blue-500"
+                    className="bg-slate-800 border-slate-700 py-5 focus:ring-blue-500"
                     {...register("name", { required: "Name is required" })}
                   />
                   {errors.name && (
@@ -126,7 +136,7 @@ export default function ContactSection() {
                   <Input
                     type="email"
                     id="email"
-                    className="bg-slate-800 border-slate-700 focus:ring-blue-500"
+                    className="bg-slate-800 border-slate-700 py-5 focus:ring-blue-500"
                     {...register("email", {
                       required: "Email is required",
                       pattern: {
@@ -148,7 +158,7 @@ export default function ContactSection() {
                   <Input
                     type="text"
                     id="subject"
-                    className="bg-slate-800 border-slate-700 focus:ring-blue-500"
+                    className="bg-slate-800 border-slate-700 py-5 focus:ring-blue-500"
                     {...register("subject", {
                       required: "Subject is required",
                     })}
@@ -166,7 +176,7 @@ export default function ContactSection() {
                   <Textarea
                     id="message"
                     rows={4}
-                    className="bg-slate-800 border-slate-700 focus:ring-blue-500"
+                    className="bg-slate-800 border-slate-700 py-10 focus:ring-blue-500"
                     {...register("message", {
                       required: "Message is required",
                     })}

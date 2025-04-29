@@ -1,16 +1,18 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { link } from "fs";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import {
-  FaProjectDiagram,
-  FaAtom,
-  FaChalkboardTeacher,
-  FaBook,
-} from "react-icons/fa";
+import { FaChalkboardTeacher, FaBook } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function WorkSection() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const projects = [
     {
       title: "Tutors Connect",
@@ -33,7 +35,13 @@ export default function WorkSection() {
   ];
 
   return (
-    <section id="work" className="container mx-auto px-6 py-20">
+    <section
+      id="work"
+      data-aos="fade-up"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      className="container mx-auto px-6 py-20"
+    >
       <h2 className="text-3xl md:text-4xl font-bold mb-12 gradient-text text-center">
         Featured Projects
       </h2>

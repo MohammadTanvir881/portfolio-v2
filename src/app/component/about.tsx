@@ -1,6 +1,13 @@
+"use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Card } from "@/components/ui/card";
 
 export default function AboutSection() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   const timelineItems = [
     {
       title: "Bachelor's in Physics",
@@ -26,7 +33,11 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="container mx-auto px-6 py-20">
+    <section 
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    id="about" className="container mx-auto px-6 py-20">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 gradient-text text-center">
           About Me
