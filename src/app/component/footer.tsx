@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500 text-sm">
-          <p>Built with ❤️ using Next.js, TypeScript, and shadcn/ui</p>
+          <p>Built with  Next.js, TypeScript, and shadcn/ui</p>
         </div>
       </div>
     </footer>

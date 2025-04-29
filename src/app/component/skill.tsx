@@ -25,7 +25,7 @@ export default function SkillsSection() {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
           {skills.map((skill, index) => (
-            <Card key={index} className="bg-slate-800/60 p-6 rounded-xl">
+            <Card key={index} className="bg-slate-800/60 p-6 rounded-xl border-none">
               <div className="flex justify-center">
                 {skill.icon === "nextjs" ? (
                   <img

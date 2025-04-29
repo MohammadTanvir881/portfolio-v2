@@ -1,14 +1,34 @@
-'use client'
+"use client";
 
+import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
 
-import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
-import { Card } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+type FormData = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
 export default function ContactSection() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormData>();
+
+  const onSubmit = (data: FormData) => {
+    console.log("Form data:", data); // This will log the form data to console
+    // Here you would typically send the data to your backend
+    reset(); // Reset the form after submission
+  };
+
   return (
     <section id="contact" className="container mx-auto px-6 py-20">
       <div className="max-w-4xl mx-auto">
@@ -16,7 +36,7 @@ export default function ContactSection() {
           Get In Touch
         </h2>
 
-        <Card className="rounded-2xl p-8 border-slate-800 bg-slate-900/70 backdrop-blur-sm">
+        <Card className="rounded-2xl text-gray-200 p-8 border-slate-800 bg-slate-900/70 backdrop-blur-sm">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">Contact Information</h3>
@@ -32,12 +52,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <a
-                      href="mailto:your.email@example.com"
-                      className="text-slate-400 hover:text-blue-400"
-                    >
-                      your.email@example.com
-                    </a>
+                    <p>tanvirrashid881@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -87,38 +102,80 @@ export default function ContactSection() {
 
             <div>
               <h3 className="text-xl font-bold mb-4">Send Me a Message</h3>
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div>
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="name" className="mb-2">
+                    Name
+                  </Label>
                   <Input
                     type="text"
                     id="name"
                     className="bg-slate-800 border-slate-700 focus:ring-blue-500"
+                    {...register("name", { required: "Name is required" })}
                   />
+                  {errors.name && (
+                    <p className="text-red-400 text-sm mt-1">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
                 <div>
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email" className="mb-2">
+                    Email
+                  </Label>
                   <Input
                     type="email"
                     id="email"
                     className="bg-slate-800 border-slate-700 focus:ring-blue-500"
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Invalid email address",
+                      },
+                    })}
                   />
+                  {errors.email && (
+                    <p className="text-red-400 text-sm mt-1">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
                 <div>
-                  <Label htmlFor="subject">Subject</Label>
+                  <Label htmlFor="subject" className="mb-2">
+                    Subject
+                  </Label>
                   <Input
                     type="text"
                     id="subject"
                     className="bg-slate-800 border-slate-700 focus:ring-blue-500"
+                    {...register("subject", {
+                      required: "Subject is required",
+                    })}
                   />
+                  {errors.subject && (
+                    <p className="text-red-400 text-sm mt-1">
+                      {errors.subject.message}
+                    </p>
+                  )}
                 </div>
                 <div>
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message" className="mb-2">
+                    Message
+                  </Label>
                   <Textarea
                     id="message"
                     rows={4}
                     className="bg-slate-800 border-slate-700 focus:ring-blue-500"
+                    {...register("message", {
+                      required: "Message is required",
+                    })}
                   />
+                  {errors.message && (
+                    <p className="text-red-400 text-sm mt-1">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </div>
                 <Button
                   type="submit"
@@ -132,5 +189,5 @@ export default function ContactSection() {
         </Card>
       </div>
     </section>
-  )
+  );
 }
