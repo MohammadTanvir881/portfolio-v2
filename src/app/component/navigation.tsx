@@ -15,16 +15,19 @@ export default function Navigation() {
       </Link>
 
       <div className="hidden md:flex space-x-8">
-        <Link href="#home" className="hover-underline-animation">
+        <Link href="/" className="hover-underline-animation">
           Home
         </Link>
-        <Link href="#work" className="hover-underline-animation">
+        <Link href="/projects" className="hover-underline-animation">
+          Projects
+        </Link>
+        <Link href="/#work" className="hover-underline-animation">
           Work
         </Link>
-        <Link href="#about" className="hover-underline-animation">
+        <Link href="/#about" className="hover-underline-animation">
           About
         </Link>
-        <Link href="#contact" className="hover-underline-animation">
+        <Link href="/#contact" className="hover-underline-animation">
           Contact
         </Link>
       </div>
@@ -37,7 +40,7 @@ export default function Navigation() {
         </SheetTrigger>
         <SheetContent side="right" className="bg-slate-900 border-slate-800">
           <div className="flex flex-col space-y-4 mt-8">
-            <Link href="#home" className="text-lg">
+            <Link href="/" className="text-lg">
               <Button
                 variant={"ghost"}
                 className="text-white  hover:bg-gray-800"
@@ -46,7 +49,16 @@ export default function Navigation() {
                 Home
               </Button>
             </Link>
-            <Link href="#work" className="text-lg">
+            <Link href="/projects" className="text-lg">
+              <Button
+                variant={"ghost"}
+                className="text-white  hover:bg-gray-800"
+              >
+                {" "}
+                Projects
+              </Button>
+            </Link>
+            <Link href="/#work" className="text-lg">
               <Button
                 variant={"ghost"}
                 className="text-white  hover:bg-gray-800"
@@ -55,7 +67,7 @@ export default function Navigation() {
                 Work
               </Button>
             </Link>
-            <Link href="#about" className="text-lg">
+            <Link href="/#about" className="text-lg">
               <Button
                 variant={"ghost"}
                 className="text-white hover:bg-gray-800"
@@ -64,7 +76,7 @@ export default function Navigation() {
                 About
               </Button>
             </Link>
-            <Link href="#contact" className="text-lg">
+            <Link href="/#contact" className="text-lg">
               <Button
                 variant={"ghost"}
                 className="text-white  hover:bg-gray-800"

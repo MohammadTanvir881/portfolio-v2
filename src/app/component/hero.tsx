@@ -5,8 +5,8 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 
 export default function HeroSection() {
@@ -42,7 +42,7 @@ export default function HeroSection() {
       data-aos-duration="1000"
       data-aos-easing="ease-in-out"
       id="home"
-      className="container mx-auto px-6 py-20 md:py-32 gap-10 flex flex-col md:flex-row items-center"
+      className="container mx-auto px-6 py-20 md:py-32 gap-10 flex flex-col  md:flex-row items-center"
     >
       <div className="md:w-1/2 mb-12 md:mb-0">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
