@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import Link from "next/link";
+import { Facebook, Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -7,7 +7,9 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <div className="text-2xl font-bold gradient-text mb-2">Tanvir Rashid</div>
+            <div className="text-2xl font-bold gradient-text mb-2">
+              Tanvir Rashid
+            </div>
             <p className="text-slate-400">
               Full Stack Developer & Physics Enthusiast
             </p>
@@ -16,25 +18,29 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-6 mb-4">
               <Link
-                href="#"
+                href="https://github.com/MohammadTanvir881"
+                target="_blank"
                 className="text-slate-400 hover:text-blue-400 transition-colors"
               >
                 <Github className="h-6 w-6" />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/in/tanvirrashid881/"
+                target="_blank"
                 className="text-slate-400 hover:text-blue-400 transition-colors"
               >
                 <Linkedin className="h-6 w-6" />
               </Link>
               <Link
-                href="#"
+                href="https://www.facebook.com/mohammad.tanvir.114"
+                target="_blank"
                 className="text-slate-400 hover:text-blue-400 transition-colors"
               >
-                <Twitter className="h-6 w-6" />
+                <Facebook className="h-6 w-6" />
               </Link>
               <Link
-                href="#"
+                href="mailto:tanvirrashid881@gmail.com"
+                target="_blank"
                 className="text-slate-400 hover:text-blue-400 transition-colors"
               >
                 <Mail className="h-6 w-6" />
@@ -42,15 +48,16 @@ export default function Footer() {
             </div>
 
             <div className="text-sm text-slate-500">
-              &copy; {new Date().getFullYear()} Tanvir Rashid. All rights reserved.
+              &copy; {new Date().getFullYear()} Tanvir Rashid. All rights
+              reserved.
             </div>
           </div>
         </div>
 
         <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500 text-sm">
-          <p>Built with  Next.js, TypeScript, and shadcn/ui</p>
+          <p>Built with Next.js, TypeScript, and shadcn/ui</p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

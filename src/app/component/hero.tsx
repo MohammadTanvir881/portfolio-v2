@@ -1,7 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import {
+  ArrowDown,
+  Facebook,
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+} from "lucide-react";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -64,34 +71,44 @@ export default function HeroSection() {
             <Link href="#work">View My Work</Link>
           </Button>
           <Button
-            // variant="outline"
             className="px-6 py-6 border border-slate-600 bg-transparent rounded-lg font-semibold hover:bg-slate-800 transition-all"
             asChild
           >
-            <Link href="#contact">Let's Talk</Link>
+            <Link
+              href="https://drive.google.com/file/d/1NHTO-XGy358-889HXaIyn32htJa6mfXh/view?usp=sharing"
+              target="_blank"
+              className="flex items-center gap-2"
+            >
+              <ArrowDown className="w-5 h-5" />
+              View CV
+            </Link>
           </Button>
         </div>
         <div className="flex space-x-6">
           <Link
-            href="#"
+            href="https://github.com/MohammadTanvir881"
+            target="_blank"
             className="text-xl hover:text-blue-400 transition-colors"
           >
             <Github className="h-6 w-6" />
           </Link>
           <Link
-            href="#"
+            href="https://www.linkedin.com/in/tanvirrashid881/"
+            target="_blank"
             className="text-xl hover:text-blue-400 transition-colors"
           >
             <Linkedin className="h-6 w-6" />
           </Link>
           <Link
-            href="#"
+            href="https://www.facebook.com/mohammad.tanvir.114"
+            target="_blank"
             className="text-xl hover:text-blue-400 transition-colors"
           >
-            <Twitter className="h-6 w-6" />
+            <Facebook className="h-6 w-6" />
           </Link>
           <Link
-            href="#"
+            href="mailto:tanvirrashid881@gmail.com"
+            target="_blank"
             className="text-xl hover:text-blue-400 transition-colors"
           >
             <Mail className="h-6 w-6" />

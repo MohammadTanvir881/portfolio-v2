@@ -1,6 +1,14 @@
 "use client";
 
-import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import {
+  Facebook,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+} from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -10,6 +18,9 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import aos from "aos";
 import "aos/dist/aos.css";
+import { Toaster, toast } from "sonner";
+import { send } from "process";
+import { sendEmail } from "@/Email/sendEmail";
 
 type FormData = {
   name: string;
@@ -30,17 +41,21 @@ export default function ContactSection() {
   } = useForm<FormData>();
 
   const onSubmit = (data: FormData) => {
-    console.log("Form data:", data); // This will log the form data to console
+    console.log("Form data:", data);
+    toast.success("Message sent successfully!");
+    // sendEmail(data.email, data.subject, data.name, data.message);
     // Here you would typically send the data to your backend
     reset(); // Reset the form after submission
   };
 
   return (
     <section
-    data-aos="fade-up"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    id="contact" className="container mx-auto px-6 py-20 space-y-3">
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      id="contact"
+      className="container mx-auto px-6 py-20 space-y-3"
+    >
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 gradient-text text-center">
           Get In Touch
@@ -89,22 +104,25 @@ export default function ContactSection() {
                 <h4 className="font-semibold mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://github.com/MohammadTanvir881"
+                    target="_blank"
                     className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-500 transition-colors"
                   >
                     <Github className="h-5 w-5" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/tanvirrashid881/"
+                    target="_blank"
                     className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-500 transition-colors"
                   >
                     <Linkedin className="h-5 w-5" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/mohammad.tanvir.114"
+                    target="_blank"
                     className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-500 transition-colors"
                   >
-                    <Twitter className="h-5 w-5" />
+                    <Facebook className="h-5 w-5" />
                   </a>
                 </div>
               </div>
@@ -198,6 +216,7 @@ export default function ContactSection() {
           </div>
         </Card>
       </div>
+      <Toaster />
     </section>
   );
 }

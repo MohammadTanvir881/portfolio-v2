@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
   return (
-    <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+    <nav className="container mx-auto px-6 py-4  flex justify-between items-center">
       <Link href="/" className="text-2xl font-bold gradient-text">
         Tanvir Rashid
       </Link>
@@ -20,6 +20,9 @@ export default function Navigation() {
         </Link>
         <Link href="/projects" className="hover-underline-animation">
           Projects
+        </Link>
+        <Link href="/blogs" className="hover-underline-animation">
+          Blogs
         </Link>
         <Link href="/#work" className="hover-underline-animation">
           Work
@@ -56,6 +59,15 @@ export default function Navigation() {
               >
                 {" "}
                 Projects
+              </Button>
+            </Link>
+            <Link href="/blogs" className="text-lg">
+              <Button
+                variant={"ghost"}
+                className="text-white  hover:bg-gray-800"
+              >
+                {" "}
+               Blogs
               </Button>
             </Link>
             <Link href="/#work" className="text-lg">
