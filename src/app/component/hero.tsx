@@ -1,14 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {
-  ArrowDown,
-  Facebook,
-  Github,
-  Linkedin,
-  Mail,
-  Twitter,
-} from "lucide-react";
+import { ArrowDown, Facebook, Github, Linkedin, Mail } from "lucide-react";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";

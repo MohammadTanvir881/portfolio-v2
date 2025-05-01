@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Facebook,
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-} from "lucide-react";
+import { Facebook, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -19,8 +11,6 @@ import { useEffect } from "react";
 import aos from "aos";
 import "aos/dist/aos.css";
 import { Toaster, toast } from "sonner";
-import { send } from "process";
-import { sendEmail } from "@/Email/sendEmail";
 
 type FormData = {
   name: string;

@@ -3,7 +3,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, CalendarDays, Clock, ArrowRight } from "lucide-react";
+import { ArrowLeft, CalendarDays, Clock} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const blogPosts = [
