@@ -76,7 +76,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Location</h4>
-                    <p className="text-slate-400">Irbid, Jordan</p>
+                    <p className="text-slate-400">jashore , Bangladesh</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -85,7 +85,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Phone</h4>
-                    <p className="text-slate-400">+962 7X XXX XXXX</p>
+                    <p className="text-slate-400">+8801569146826</p>
                   </div>
                 </div>
               </div>
