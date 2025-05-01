@@ -11,7 +11,7 @@ export default function AboutSection() {
   const timelineItems = [
     {
       title: "Bachelor's in Physics",
-      period: "Jordan University of Science and Technology | 2021-Present",
+      period: "Jashore University of Science and Technology | 2021-Present",
       description:
         "Studying fundamental physics principles while developing programming skills.",
       color: "bg-blue-500",
@@ -60,7 +60,7 @@ export default function AboutSection() {
                 skills to every project I work on.
               </p>
               <p className="text-slate-400 mb-6">
-                Currently pursuing my degree at Jordan University of Science and
+                Currently pursuing my degree at Jashore University of Science and
                 Technology, I balance my academic studies with building modern
                 web applications using cutting-edge technologies.
               </p>
