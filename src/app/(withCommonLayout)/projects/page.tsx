@@ -14,7 +14,7 @@ const projects = [
     links: {
       details: "/projects/1",
       code: "https://github.com/MohammadTanvir881/TUTOR_LINK_FRONTEND",
-      demo: "https://tutor-link-frontend-nine.vercel.app/",
+      demo: "https://tution-media.vercel.app/",
     },
   },
 
@@ -28,7 +28,7 @@ const projects = [
     links: {
       details: "/projects/2",
       code: "https://github.com/MohammadTanvir881/book-shop-client",
-      demo: "https://book-shop-five-xi.vercel.app/",
+      demo: "https://bookshop-client-v2.vercel.app/",
     },
   },
   {

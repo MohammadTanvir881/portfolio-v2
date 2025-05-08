@@ -108,9 +108,9 @@ export default function HeroSection() {
           </Link>
         </div>
       </div>
-      <div className="md:w-1/2 flex justify-center">
+      <div className="md:w-1/2 flex justify-center md:justify-end md:mr-20 ">
         <div className="relative">
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-700 shadow-xl">
+          <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-slate-700 shadow-xl">
             <img
               src="https://i.ibb.co.com/4RZDX2Nj/profile.jpg"
               alt="Profile"

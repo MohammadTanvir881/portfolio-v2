@@ -45,7 +45,7 @@ const projects: Project[] = [
       "https://i.ibb.co/Hf2bpjZW/Screenshot-from-2025-05-01-00-52-07.png",
       "https://i.ibb.co/CsnMzdfk/Screenshot-from-2025-05-01-00-52-46.png",
     ],
-    liveUrl: "https://tutor-link-frontend-nine.vercel.app/",
+    liveUrl: "https://tution-media.vercel.app/",
     githubUrl: "https://github.com/MohammadTanvir881/TUTOR_LINK_FRONTEND",
     techStack: [
       { name: "MongoDB", color: "green" },
@@ -99,7 +99,7 @@ const projects: Project[] = [
       "https://i.ibb.co/HLL5sCSf/Screenshot-from-2025-05-01-01-22-31.png",
     ],
 
-    liveUrl: "https://book-shop-five-xi.vercel.app/",
+    liveUrl: "https://bookshop-client-v2.vercel.app/",
     githubUrl: "https://github.com/MohammadTanvir881/book-shop-client",
     techStack: [
       { name: "Next.js", color: "blue" },

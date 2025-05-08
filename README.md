@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Book Shop Website
+A full-featured online book store with user authentication, product management, and payment processing.
 
-## Getting Started
+🔗 Live Links
+Live Site: https://bookshop-client-v2.vercel.app/
 
-First, run the development server:
+API/Server: https://book-shop-backend-woad.vercel.app/
 
-```bash
+✨ Core Features
+User authentication (login/registration with JWT)
+
+Book catalog with search and filtering
+
+Shopping cart functionality
+
+Order management system
+
+Admin dashboard for inventory management
+
+Payment integration (Stripe/PayPal)
+
+Responsive design for all devices
+
+Book rating and review system
+
+🛠️ Technologies Used
+Frontend
+React.js (v18.2.0)
+
+Redux Toolkit (v1.9.5)
+
+
+Tailwind CSS (v3.3.3)
+
+React Router (v6.15.0)
+
+SSLCOMMERZS
+
+Backend
+Node.js (v18.16.0)
+
+Express.js (v4.18.2)
+
+MongoDB (v6.0.6)
+
+Mongoose (v7.5.0)
+
+JSON Web Tokens (v9.0.1)
+
+Bcrypt.js (v2.4.3)
+
+DevOps
+AWS EC2 (Ubuntu 20.04)
+
+Nginx (v1.25.2)
+
+PM2 (v5.3.0)
+
+GitHub Actions (for CI/CD)
+
+🚀 Installation Guide
+Follow these steps to run the project locally:
+
+Prerequisites
+Node.js (v18.x or higher)
+
+MongoDB (v6.x or higher)
+
+Git
+
+Setup Instructions
+Clone the repository:
+
+bash
+git clone https://github.com/MohammadTanvir881/book-shop-client.git
+cd book-shop-website
+Install dependencies for both frontend and backend:
+
+bash
+# Frontend
+cd frontend
+npm install
+
+# Backend
+cd ../backend
+npm install
+Set up environment variables:
+Create a .env file in the backend directory with:
+
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+STRIPE_SECRET_KEY=your_stripe_test_key
+PORT=5000
+Start the development servers:
+
+bash
+# In backend directory
+npm run start:dev
+
+# In frontend directory (new terminal)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Access the application:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Frontend: http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Backend API: http://localhost:5000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🧗 Major Challenges
+Payment Integration: Implementing Stripe payment processing required handling sensitive data securely while maintaining a smooth user experience.
 
-## Learn More
+Inventory Synchronization: Ensuring real-time stock updates across multiple concurrent users was challenging, solved with database transactions.
 
-To learn more about Next.js, take a look at the following resources:
+Performance Optimization: Large book catalog required implementing pagination and efficient database queries to maintain fast load times.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Responsive Design: Creating a consistent experience across all devices required careful CSS planning and extensive testing.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🔮 Future Plans
+Implement book recommendation engine using machine learning
 
-## Deploy on Vercel
+Add audiobook and eBook support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Develop mobile applications (React Native)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Integrate with more payment gateways
+
+Add social sharing features
+
+Implement affiliate program functionality
+
+Develop advanced analytics dashboard for admin
+
+Add multilingual support

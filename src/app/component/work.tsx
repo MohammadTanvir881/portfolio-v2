@@ -21,7 +21,7 @@ export default function WorkSection() {
       gradient: "from-blue-500 to-indigo-600",
       icon: FaChalkboardTeacher,
       tags: ["Next.js", "Node.js", "MongoDB", "TypeScript"],
-      link: "https://tutor-link-frontend-nine.vercel.app",
+      link: "https://tution-media.vercel.app/",
     },
     {
       title: "Book Shop",
@@ -30,7 +30,7 @@ export default function WorkSection() {
       gradient: "from-purple-500 to-pink-600",
       icon: FaBook,
       tags: ["TypeScript", "Node.js", "React.js", "MongoDB"],
-      link: "https://book-shop-five-xi.vercel.app/",
+      link: "https://bookshop-client-v2.vercel.app/",
     },
   ];
 
